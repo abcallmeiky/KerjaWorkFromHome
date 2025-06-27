@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lowongan: Admin Pemasaran (WFH)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutral Professional -->
+    <!-- Application Structure Plan: Saya merancang aplikasi ini sebagai sebuah narasi visual satu halaman yang mengalir. Strukturnya dimulai dengan Hero Section yang menarik perhatian, diikuti oleh bagian-bagian yang mudah dicerna: "Profil Ideal Anda" (persyaratan yang dibuat lebih personal), "Peran Anda" (tanggung jawab dengan ikon), "Keuntungan Bergabung" (manfaat yang ditonjolkan), dan visualisasi "Potensi Pertumbuhan" menggunakan grafik. Alur ini dipilih untuk mengubah lowongan kerja statis menjadi sebuah perjalanan interaktif yang meyakinkan, memandu kandidat dari rasa penasaran hingga keinginan untuk melamar, daripada hanya menyajikan daftar poin yang membosankan. -->
+    <!-- Visualization & Content Choices: 
+        - Judul & Teks: (Goal: Inform) Disajikan dengan tipografi yang jelas dan hirarki visual untuk memandu mata pembaca.
+        - Persyaratan (Profil Ideal): (Goal: Organize/Inform) Disajikan sebagai kartu-kartu interaktif. Ini lebih menarik daripada daftar biasa. (Method: HTML/Tailwind).
+        - Tanggung Jawab (Peran Anda): (Goal: Organize) Menggunakan layout grid dengan ikon Unicode. Ini memecah informasi menjadi bagian-bagian kecil yang mudah dipahami. (Method: HTML/Tailwind).
+        - Keuntungan: (Goal: Compare/Inform) Menggunakan kartu yang ditonjolkan untuk menekankan nilai jual dari posisi ini. (Method: HTML/Tailwind).
+        - Potensi Pertumbuhan: (Goal: Show Change) Menggunakan Chart.js Bar Chart untuk memvisualisasikan perkembangan karier. Ini mengubah janji abstrak tentang "pelatihan" menjadi sesuatu yang lebih konkret dan menarik. (Library: Chart.js).
+        - Tombol/CTA: (Goal: Action) Tombol yang jelas untuk navigasi dan aksi. Interaksi: klik. (Method: HTML/Tailwind). -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFBF5;
+            color: #374151;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #1F2937;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+         .section-subtitle {
+            font-size: 1.125rem;
+            color: #4B5563;
+            text-align: center;
+            max-width: 3xl;
+            margin: 0 auto 3rem auto;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .icon-circle {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #E0E7FF;
+            color: #4F46E5;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <main>
+        <section class="h-screen min-h-[800px] flex flex-col items-center justify-center text-center px-4 bg-white">
+            <div class="max-w-3xl">
+                <!-- Image of Marketing Globe -->
+                <img src="https://vui.unsplash.com/resize?height=256&quality=60&type=auto&url=https%3A%2F%2Fsearched-images.s3.us-west-2.amazonaws.com%2Fa504e754-cb0f-4bf9-9339-0300dc574c57%3FX-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DAKIAQ4GRIA4Q4QHSYODJ%252F20250627%252Fus-west-2%252Fs3%252Faws4_request%26X-Amz-Date%3D20250627T062823Z%26X-Amz-Expires%3D86400%26X-Amz-SignedHeaders%3Dhost%26X-Amz-Signature%3D5a09d8d9fd27d423df6ba29393bce700386f2464c491f30383e314c5f78162bd&sign=7k1A5zScJWbTNjY_vsy9mJfkuGHTutW3ugp1n1DUHmk" alt="Ilustrasi Pemasaran Digital" class="w-32 h-32 md:w-48 md:h-48 rounded-full mx-auto mb-6 object-cover">
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 mb-4">Mulai Karir Anda di Dunia Pemasaran Digital</h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8">Kami membuka peluang bagi Anda yang dinamis dan bersemangat untuk bergabung sebagai Admin Pemasaran (WFH). Mari tumbuh bersama kami!</p>
+                <button id="learn-more-btn" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full hover:bg-indigo-700 transition-colors text-lg">
+                    Pelajari Lebih Lanjut
+                </button>
+            </div>
+        </section>
+
+        <div id="job-details" class="py-20 md:py-28 px-4 sm:px-6 lg:px-8">
+            
+            <section class="mb-20 md:mb-28">
+                <h2 class="section-title">Profil Ideal Kandidat Kami</h2>
+                <p class="section-subtitle">Kami mencari individu dengan karakteristik berikut. Bagian ini akan membantu Anda melihat apakah peran ini cocok untuk Anda.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <div class="card text-center items-center flex flex-col">
+                        <div class="icon-circle">👩</div>
+                        <h3 class="font-bold text-xl mb-2">Wanita Dinamis</h3>
+                        <p class="text-gray-600">Usia antara 21 hingga 40 tahun yang siap beradaptasi dan belajar.</p>
+                    </div>
+                    <div class="card text-center items-center flex flex-col">
+                        <div class="icon-circle">🎯</div>
+                        <h3 class="font-bold text-xl mb-2">Proaktif & Bertanggung Jawab</h3>
+                        <p class="text-gray-600">Memiliki inisiatif tinggi dan dapat diandalkan dalam menyelesaikan tugas.</p>
+                    </div>
+                    <div class="card text-center items-center flex flex-col">
+                         <div class="icon-circle">🚀</div>
+                        <h3 class="font-bold text-xl mb-2">Mandiri & Terarah</h3>
+                        <p class="text-gray-600">Mampu bekerja secara independen dengan pengawasan minimal.</p>
+                    </div>
+                    <div class="card text-center items-center flex flex-col">
+                         <div class="icon-circle">💡</div>
+                        <h3 class="font-bold text-xl mb-2">Semangat Belajar</h3>
+                        <p class="text-gray-600">Pengalaman bukan keharusan. Kami mencari kemauan untuk tumbuh.</p>
+                    </div>
+                    <div class="card text-center items-center flex flex-col">
+                        <div class="icon-circle">🛒</div>
+                        <h3 class="font-bold text-xl mb-2">Paham E-commerce (Nilai Plus)</h3>
+                        <p class="text-gray-600">Mengerti dasar-dasar Shopee atau platform sejenis adalah keuntungan.</p>
+                    </div>
+                     <div class="card text-center items-center flex flex-col">
+                        <div class="icon-circle">💳</div>
+                        <h3 class="font-bold text-xl mb-2">Akses Finansial</h3>
+                        <p class="text-gray-600">Memiliki rekening bank atau E-wallet untuk kemudahan pembayaran.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-20 md:mb-28">
+                <h2 class="section-title">Peran Anda Bersama Kami</h2>
+                 <p class="section-subtitle">Sebagai bagian dari tim, Anda akan memegang peranan penting dalam operasional pemasaran kami. Berikut adalah gambaran tugas dan tanggung jawab harian Anda.</p>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-3xl">📈</div>
+                        <div>
+                            <h3 class="font-semibold text-lg">Strategi Pemasaran</h3>
+                            <p class="text-gray-600">Membantu implementasi dan eksekusi berbagai strategi pemasaran online.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="text-3xl">✍️</div>
+                        <div>
+                            <h3 class="font-semibold text-lg">Manajemen Konten</h3>
+                            <p class="text-gray-600">Mengelola dan memperbarui konten produk atau promosi di media sosial dan e-commerce.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="text-3xl">💬</div>
+                        <div>
+                            <h3 class="font-semibold text-lg">Interaksi Komunitas</h3>
+                            <p class="text-gray-600">Berinteraksi dengan calon pelanggan atau audiens di platform online (jika diperlukan).</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start space-x-4">
+                        <div class="text-3xl">🔍</div>
+                        <div>
+                            <h3 class="font-semibold text-lg">Riset Pasar</h3>
+                            <p class="text-gray-600">Melakukan riset sederhana terkait tren pasar dan aktivitas kompetitor.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="text-3xl">📊</div>
+                        <div>
+                            <h3 class="font-semibold text-lg">Pelaporan</h3>
+                            <p class="text-gray-600">Membuat laporan singkat dan ringkas mengenai performa kampanye pemasaran.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-20 md:mb-28">
+                <h2 class="section-title">Keuntungan & Pertumbuhan</h2>
+                <p class="section-subtitle">Kami percaya bahwa karyawan adalah aset berharga. Oleh karena itu, kami menawarkan berbagai keuntungan yang mendukung kesejahteraan dan pertumbuhan karir Anda.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                    <div class="card bg-indigo-50">
+                        <h3 class="font-bold text-xl mb-2 text-indigo-800">Kerja Fleksibel (WFH)</h3>
+                        <p class="text-indigo-700">Nikmati kebebasan bekerja dari mana saja dengan jadwal yang dapat disesuaikan.</p>
+                    </div>
+                    <div class="card bg-indigo-50">
+                        <h3 class="font-bold text-xl mb-2 text-indigo-800">Gaji Kompetitif</h3>
+                        <p class="text-indigo-700">Skema gaji berbasis kinerja yang adil dan memotivasi untuk terus berprestasi.</p>
+                    </div>
+                    <div class="card bg-indigo-50">
+                        <h3 class="font-bold text-xl mb-2 text-indigo-800">Bonus & Komisi</h3>
+                        <p class="text-indigo-700">Peluang mendapatkan penghasilan tambahan berdasarkan pencapaian individu.</p>
+                    </div>
+                     <div class="card bg-indigo-50">
+                        <h3 class="font-bold text-xl mb-2 text-indigo-800">Pelatihan Gratis</h3>
+                        <p class="text-indigo-700">Akses ke program pelatihan untuk meningkatkan skill pemasaran digital Anda.</p>
+                    </div>
+                </div>
+            </section>
+
+             <section>
+                <h2 class="section-title">Visualisasi Potensi Pertumbuhan Anda</h2>
+                <p class="section-subtitle">Kami berinvestasi pada pengembangan Anda. Grafik ini mengilustrasikan potensi peningkatan keterampilan dan tanggung jawab Anda dari waktu ke waktu bersama kami, dimulai bahkan dari tanpa pengalaman.</p>
+                <div class="chart-container">
+                    <canvas id="growthChart"></canvas>
+                </div>
+            </section>
+        </div>
+
+        <footer class="bg-white py-12 px-4">
+            <div class="text-center max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Siap untuk Bergabung?</h2>
+                <p class="text-gray-600 mb-6">Jika Anda merasa ini adalah kesempatan yang Anda cari dan siap untuk tantangan baru, kami sangat menantikan lamaran Anda. Kirimkan aplikasi Anda dan mari mulai perjalanan ini bersama.</p>
+                <a href="https://wa.me/+6281330753785" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full hover:bg-indigo-700 transition-colors text-lg inline-block">
+                    Lamar Sekarang
+                </a>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.getElementById('learn-more-btn').addEventListener('click', function() {
+            document.getElementById('job-details').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        const ctx = document.getElementById('growthChart').getContext('2d');
+        const growthChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Dasar (Bulan 1-3)', 'Menengah (Bulan 4-6)', 'Mahir (Bulan 7+)', 'Spesialis'],
+                datasets: [{
+                    label: 'Tingkat Keterampilan & Tanggung Jawab',
+                    data: [25, 50, 75, 100],
+                    backgroundColor: [
+                        'rgba(165, 180, 252, 0.6)',
+                        'rgba(129, 140, 248, 0.6)',
+                        'rgba(99, 102, 241, 0.6)',
+                        'rgba(79, 70, 229, 0.6)'
+                    ],
+                    borderColor: [
+                        'rgba(165, 180, 252, 1)',
+                        'rgba(129, 140, 248, 1)',
+                        'rgba(99, 102, 241, 1)',
+                        'rgba(79, 70, 229, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%'
+                            }
+                        },
+                         grid: {
+                            color: 'rgba(200, 200, 200, 0.2)'
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    if(context.parsed.y <= 25) label += 'Pengenalan & Pelatihan Dasar';
+                                    else if(context.parsed.y <= 50) label += 'Implementasi & Kontribusi Aktif';
+                                    else if(context.parsed.y <= 75) label += 'Manajemen & Analisis Mandiri';
+                                    else label += 'Strategi & Kepemimpinan Proyek';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
